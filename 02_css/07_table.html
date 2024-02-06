@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+
+    .table1 {
+      border: 1px solid gray;
+      border-collapse: collapse;
+    }
+    .table1 td {
+      border-bottom: 1px solid tomato;
+      text-align: center; /* 가로 가운데 정렬 */
+    }
+    .table1 td:first-of-type {
+      width: 100px;
+    }
+    .table1 td:nth-of-type(2) {
+      width: 200px;
+    }
+    .table1 td:last-of-type {
+      width: 300px;
+    }
+
+    .table1 > thead td {
+      padding: 10px; /* padding을 이용한 세로 가운데 정렬 효과 */
+    }
+    .table1 > tbody td {
+      height: 50px; /* height을 이용한 세로 가운데 정렬 확인 */
+      vertical-align: top;    /* 세로 상단 정렬*/
+      vertical-align: bottom; /* 세로 하단 정렬*/
+    }
+
+    .table1 tr:hover {
+      background-color: rgb(181, 239, 181);
+      cursor: pointer;
+    }
+    
+  </style>
+
+  <table class="table1">
+    <thead>
+      <tr>
+        <td>회원번호</td>
+        <td>회원명</td>
+        <td>포인트</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>고길동</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>고사리</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>고라니</td>
+        <td>300</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">포인트 합계</td>
+        <td>600</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <hr>
+
+  <style>
+    .title {
+      text-align: center;
+      font-weight: bold;
+    }
+    .month {
+      font-size: 50px;
+      color: blue;
+    }
+    .table2 {
+      margin: auto;
+      border: 1px solid gray;
+      font-weight: bold;
+      border-collapse: collapse;
+    }
+    .table2 > thead td{
+      border: 1px solid gray;
+      text-align: center;
+      padding: 10px;
+    }
+    .table2 > tbody td {
+      border: 1px solid gray;
+      padding: 10px 70px 70px 10px;
+    }
+    #id1 {
+      color: rgb(188, 188, 188);
+    }
+    #id2 {
+      color: red;
+    }
+    #id3 {
+      color: blue;
+    }
+
+
+  </style>
+  <div class="title">
+    2024
+     <span class="month">2</span>
+     <span class="month-eng">February</span>
+  </div>
+  <table class="table2">
+    <thead>
+      <tr>
+        <td id="id2">SUN</td>
+        <td>MON</td>
+        <td>TUE</td>
+        <td>WED</td>
+        <td>THU</td>
+        <td>FRI</td>
+        <td id="id3">SAT</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="id1">28</td>
+        <td id="id1">29</td>
+        <td id="id1">30</td>
+        <td id="id1">31</td>
+        <td>1</td>
+        <td>2</td>
+        <td id="id3">3</td>
+      </tr>
+      <tr>
+        <td id="id2">4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td id="id2">9</td>
+        <td id="id2">10</td>
+      </tr>
+      <tr>
+        <td id="id2">11</td>
+        <td id="id2">12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td id="id3">17</td>
+      </tr>
+      <tr>
+        <td id="id2">18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td id="id3">24</td>
+      </tr>
+      <tr>
+        <td id="id2">25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td id="id1">1</td>
+        <td id="id1">2</td>
+      </tr>
+    </tbody>
+
+  </table>
+  
+</body>
+</html>
