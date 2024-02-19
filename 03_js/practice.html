@@ -8,9 +8,68 @@
 <body>
 
   <script>
+    var hourlyWage = 9860;  // 시급 : 9860원
+    var workingTime = 10;  // 근무한 시간 : 10시간
 
+    var regularPay = hourlyWage * workingTime;  // 시급 9860원 * 8시간 (10시간에서 초과수당 2시간 뺀 금액)
+    var extraPay =  // 초과근무 금액
+    (workingTime <= 8)  // 근무 시간이 8시간 이하일 경우
+     ? 0 : // 조건이 true일 경우 초과근무 없으므로 0 반환
+     (workingTime - 8) * hourlyWage * 0.5; // 조건이 거짓일 경우(초과근무가 있는 경우) 근무시간에서 8시간 뺀 뒤 초과근무의 시급인 1.5배하기
 
   </script>
+
+  <script>
+    // 1부터 5까지 출력하기
+
+    var n = 1;
+    var result = '<h1>';
+    while(n <= 5) {
+      result += n + '&nbsp';
+      n++;
+    }
+    result += '</h1>';
+    document.write(result);
+  </script>
+
+  <script>
+    // 이미지 10개 출력하기
+
+
+    var imgNo = 1;
+    var imgTag = '<div>';
+      while(imgNo <= 10) {
+        imgTag += '<img src = "../../assets/image/animal' + imgNo + '.jpg" width="100px"> &nbsp;'
+        imgNo++;
+      }
+      imgTag += '</div>';
+      document.write(imgTag);
+  </script>
+
+  <script>
+    var selectTag = '<select name = "month">';
+    selectTag += '<option value "">선택</option>';
+    for(var month = 1; month <= 12; month++) {
+      selectTag += '<option value = " ' + month + ' ">' + month + '월</option>';
+    }
+    document.write(selectTag);
+  </script>
+
+  <script>
+    var imgTag = '<div>';
+      for(var row = 1; row <= 3; row++) {
+        imgTag += '<div>';
+        for(var col = 1; col <= 3; col++) {
+          imgTag += '<img src = "../../assets/image/animal' + ((row -1) * 3 + col) + '.jpg" width="100px">';
+        }
+        imgTag += '</div>';
+      }
+      imgTag += '</div>';
+      document.write(imgTag);
+
+  </script>
+
+
   
 </body>
 </html>
