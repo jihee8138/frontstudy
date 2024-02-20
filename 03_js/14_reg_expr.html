@@ -239,17 +239,17 @@
     function fnValidPw() {
       var inpPw = document.getElementById('pw').value;
       var length = inpPw.length;
-      var passCount = /[A-Z]/.test(inp.pw)          
-                    + /[a-z]/.test(inp.pw)          
-                    + /[0-9]/.test(inp.pw)          
-                    + /[^A-Za-z0-9]/.test(inp.pw);
+      var passCount = /[A-Z]/.test(inpPw)          
+                    + /[a-z]/.test(inpPw)          
+                    + /[0-9]/.test(inpPw)          
+                    + /[^A-Za-z0-9]/.test(inpPw);
       return length >= 8 && length <= 16 && passCount >= 3;
     }
 
     function fnValidPwCheck() {
-      var inpPw = document.getElementById('pw').va;ue;
+      var inpPw = document.getElementById('pw').value;
       var inpPwCheck = document.getElementById('pw-check').value;
-      return inpPw.length != 0 && inpPw === inpPwCheck;
+      return inpPw.length !== 0 && inpPw === inpPwCheck;
     }
 
     function fnValidEmail() {
