@@ -67,6 +67,18 @@
       imgTag += '</div>';
       document.write(imgTag);
 
+      var imgTag = '<div>';
+    for(var row = 1; row <= 3; row++) {
+      imgTag += '<div>';
+      for(var col = 1; col <= 3; col++) {
+        imgTag += '<img src="../../assets/image/animal' + ((row - 1) * 3 + col) + '.jpg" width="100px">&nbsp;';
+      }
+      imgTag += '</div>';
+    }
+    imgTag += '</div>';
+    document.write(imgTag);
+
+
   </script>
 
 
