@@ -77,10 +77,51 @@
     }
     imgTag += '</div>';
     document.write(imgTag);
-
-
   </script>
 
+  <script>
+    var array = [10, 'hello', true];
+
+    for(var i = 0; i < array.length; i++) {
+      console.log(array[i]);
+    }
+    for(var i in array) {
+      console.log(array[i]);
+    }
+  </script>
+
+  <script>
+
+var msg = '';
+    function countDown(number) {
+      setTimeout(function() {
+        if(number == 0) {
+          msg = '<h1>발사</h1>';
+          document.write(msg);
+          return;
+        }
+        msg = '<h1>' + number + '</h1>';
+        document.write(msg);
+        countDown(number - 1);  // 재귀 호출
+      }, 1000);
+    }
+
+    countDown(5);
+
+    var msg = '';  // msg라는 변수 선언, 빈 문자열로 초기화
+    function countDown(number) {  // countDown 함수 정의 (매개변수 : number)
+      setTimeout(function() {
+        if(number == 0) {  // 만약 숫자가 0이라면 (카운트다운이 완료되었다면)
+          msg = '발사';
+          document.write(msg);
+          return;
+        }
+        msg = number;
+        document.write(msg);
+        countDown(number - 1);
+      }, 1000);
+    }
+  </script>
 
   
 </body>
