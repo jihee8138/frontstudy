@@ -18,6 +18,17 @@
       btn1의 ON, OFF 텍스트를 교환하시오.
     */
 
+    document.getElementById('btn1').onclick = function(evt) {
+      var img = document.querySelector('#div1 img');
+      if(evt.target.textContent === 'ON') {
+        img.src = '../../assets/image/light2.png';
+        evt.target.textContent = 'OFF';
+      } else {
+        img.src = '../../assets/image/light1.png';
+        evt.target.textContent = 'ON';
+      }
+    }
+
   </script>
 
   <hr>
@@ -26,7 +37,7 @@
     <div id="img-slide">
       <button id="btn-prev" type="button">이전</button>
       <span id="img-no">1 / 10</span>
-      <button id="btn-prev" type="button">이전</button>
+      <button id="btn-next" type="button">다음</button>
     </div>
     <div id="img-container"></div>
   </div>
@@ -53,6 +64,18 @@
   </style>
   <script>
     /* animal1.jpg ~ animal10.jpg 를 이용하여 이미지 슬라이드를 만드시오. */
+    var img_slide = document.getElementById('img-slide');
+    var img_on = document.getElementById('img-no');
+    var img_container = document.getElementById('img-container');
+    var btn_prev = document.getElementById('btn-prev');
+    var btn_next = document.getElementById('btn-next');
+
+    function change_img(number) {
+
+    }
+
+    btn_prev.onclick = function () { change_img(-1); } 
+    btn_prev.onclick = function () { change_img(1); } 
 
   </script>
 
